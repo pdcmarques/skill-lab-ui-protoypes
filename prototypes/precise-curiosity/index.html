@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Skills Lab — Precise Curiosity Exercise Canvas</title>
+  <link rel="stylesheet" href="styles-base.css" />
+  <link rel="stylesheet" href="styles-responsive.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="rail" aria-label="Primary navigation">
+    <div class="brand-mark" aria-label="Skills Lab"><div class="flask"><span class="spark"></span></div></div>
+    <button class="rail-btn"><span class="ico">⌂</span><span>Home</span></button>
+    <button class="rail-btn active"><span class="ico">▣</span><span>Learn</span></button>
+    <button class="rail-btn"><span class="ico">◇</span><span>Skills</span></button>
+    <button class="rail-btn"><span class="ico">✦</span><span>Practice</span></button>
+    <button class="rail-btn"><span class="ico">↗</span><span>Progress</span></button>
+    <div class="rail-spacer"></div>
+    <button class="rail-btn"><span class="ico">?</span><span>Help</span></button>
+    <div class="avatar">A</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="wordmark">Skills Lab<small>MATHEMATICS · THINKING · GROWTH</small></div>
+      <div class="crumbs">Multiplication › Equal groups › Represent situations</div>
+      <div class="progress-top" aria-label="Question 3 of 5">
+        <div class="progress-dots"><i class="done"></i><i class="done"></i><i class="done"></i><i></i><i></i></div>
+        <span class="progress-label">3 / 5</span>
+      </div>
+      <div class="points">★ 12</div>
+    </header>
+
+    <section class="stage">
+      <article class="exercise-card">
+        <div class="mobile-header">
+          <div class="mh-brand">Skills Lab</div>
+          <span class="step-count">3 / 5</span>
+          <button id="mobileMore" aria-label="More options">•••</button>
+        </div>
+
+        <div class="question-head">
+          <div class="eyebrow"><b>✦</b> LET'S EXPLORE</div>
+          <h1>There are <strong>6 tables</strong>. Each table has <strong>4 children</strong>.<br>How many children are sitting at the tables?</h1>
+          <p class="subline">Use the picture, build another representation, or reason it out.</p>
+        </div>
+
+        <div class="learning-area">
+          <div class="visual-stage" id="visualStage">
+            <div class="visual-label" id="visualLabel">Equal groups</div>
+            <div id="representation"></div>
+          </div>
+          <div class="repr-tools" aria-label="Representation tools">
+            <button data-repr="groups" class="active"><span class="mini">◉</span>See the groups</button>
+            <button data-repr="array"><span class="mini">▦</span>Make an array</button>
+            <button data-repr="numberline"><span class="mini">↝</span>Use a number line</button>
+            <button data-repr="equation"><span class="mini">×</span>Write a multiplication</button>
+          </div>
+        </div>
+
+        <div class="answer-bar">
+          <div class="input-wrap"><input id="answer" inputmode="numeric" autocomplete="off" placeholder="Type your answer…" aria-label="Your answer" /></div>
+          <button class="check" id="checkAnswer">Check answer</button>
+          <div class="feedback good" id="goodFeedback"><span>✓</span><span><strong>Exactly.</strong> Six groups of four make 24. You connected the situation to multiplication.</span></div>
+          <div class="feedback bad" id="badFeedback"><span>↺</span><span><strong>Not yet.</strong> Try counting 4 children at each of the 6 tables, or switch representation.</span></div>
+          <div class="mobile-tools">
+            <button data-open-coach="think">💡 Hint</button>
+            <button data-open-lesson>▻ Lesson</button>
+            <button data-repr-cycle>▦ Change view</button>
+          </div>
+        </div>
+      </article>
+
+      <aside class="coach" id="coach">
+        <div class="coach-tabs">
+          <button class="active" data-tab="think">Think</button>
+          <button data-tab="hint">Hint</button>
+          <button data-tab="lesson">Lesson</button>
+        </div>
+        <div class="coach-body" id="coachBody"></div>
+        <div class="coach-foot"><span class="dot"></span> Support is available without taking over the problem.</div>
+      </aside>
+    </section>
+  </main>
+</div>
+
+<div class="sheet-backdrop" id="sheetBackdrop"></div>
+
+<div class="lesson-overlay" id="lessonOverlay" role="dialog" aria-modal="true" aria-label="Mini lesson">
+  <section class="lesson-modal">
+    <header><div><div class="eyebrow"><b>1</b> GUIDED MINI LESSON</div><h3>From equal groups to multiplication</h3></div><button class="close" id="closeLesson">×</button></header>
+    <div class="lesson-grid">
+      <div class="lesson-visual"><div id="lessonGroups"></div></div>
+      <div class="lesson-copy">
+        <div class="coach-card"><b>1 · Identify one group</b><p>Each table has 4 children. That number stays the same in every group.</p></div>
+        <div class="coach-card"><b>2 · Count the groups</b><p>There are 6 tables, so we have six equal groups of four.</p></div>
+        <div class="coach-card"><b>3 · Connect the representation</b><p>Six groups of four can be written as <strong>6 × 4</strong>. You can now return and find the total.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
