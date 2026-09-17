@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Skills Lab — Layout C</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="variant-c">
+<div class="page variant-c">
+  <aside class="side"><div class="mark">∞</div><button class="nav-btn">⌂</button><button class="nav-btn active">▣</button><button class="nav-btn">◇</button><button class="nav-btn">↗</button><div class="side-spacer"></div><button class="nav-btn">?</button></aside>
+  <main class="main"><section class="stage"><article class="canvas-shell">
+    <div class="helper-drawer" id="helperDrawer"><div class="drawer-top"><div class="mascot" style="width:54px;height:54px;border-radius:18px"><div class="orb"></div></div><div><h2>Guide on demand</h2><p>Most radical: almost all chrome disappears so the learning surface becomes the hero.</p></div></div><div class="drawer-grid"><div class="drawer-card"><h3>Think</h3><p>Count by fours: 4, 8, 12, 16, 20, 24. Or see the situation as <strong>6 equal groups of 4</strong>.</p></div><div class="drawer-card"><h3>Hint</h3><ul><li>One table has 4 children.</li><li>There are 6 tables.</li><li>Add 4 six times.</li></ul></div><div class="drawer-card"><h3>Lesson</h3><p>Equal groups can be shown with tables, counters, repeated jumps or multiplication sentences.</p><div class="drawer-actions"><button class="small-btn primary">Open lesson</button><button class="small-btn">Show example</button></div></div></div></div>
+    <div class="hero"><div class="exercise-head"><div class="head-copy"><div class="top-strip"><div class="chip primary">Equal groups</div><div class="chip"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span>3 / 5</span></div><div class="chip">★ 12</div></div><div class="eyebrow"><span class="star">✦</span> EXPLORE EQUAL GROUPS</div><h1>How many children are sitting at <span class="accent">6 tables</span>,<br>with <span class="accent">4 children at each table</span>?</h1><p class="sub">Same content, different chrome strategy: we are testing how much the canvas can breathe while still keeping guidance, progress and help close at hand.</p></div></div><div class="work"><div class="canvas-area"><div class="canvas-label">Group model · 6 tables × 4 children</div><div id="representation"></div></div><div class="reps"><button class="rep-btn active" data-view="groups"><span class="rep-icon">G</span>Groups</button><button class="rep-btn" data-view="array"><span class="rep-icon">A</span>Array</button><button class="rep-btn" data-view="numberline"><span class="rep-icon">N</span>Number line</button><button class="rep-btn" data-view="equation"><span class="rep-icon">×</span>Equation</button></div></div><div class="answer"><div class="input-wrap"><input id="answerInput" inputmode="numeric" placeholder="Type your answer" aria-label="Answer" /></div><button class="primary-btn" id="checkBtn">Check answer</button><div class="feedback" id="feedback"></div></div></div>
+    <button class="helper-fab" id="helperToggle" aria-label="Open helper drawer"><div class="fab-pill">Ask me</div><div class="mascot"><div class="orb"></div></div></button>
+    <nav class="gallery-links"><a href="index.html">Gallery</a><a href="layout-a.html">A</a><a href="layout-b.html">B</a><a href="layout-c.html" class="active">C</a></nav>
+  </article></section></main>
+</div><script src="script.js"></script></body></html>
